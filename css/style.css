@@ -505,9 +505,66 @@ img {
   display: -ms-flexbox;
   display: flex; }
 
+.fitting__choose-box {
+  max-width: 500px;
+  margin-left: 50px;
+  margin-right: 10%; }
+
 .fitting__choose-box .filters__box {
   padding-right: 25px;
   padding-bottom: 30px; }
+
+.fitting__filters-btn {
+  width: 100%;
+  margin-bottom: 30px; }
+
+.fitting .filters {
+  display: none; }
+
+.fitting .filters__form {
+  width: 442px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.fitting .filters__close-btn {
+  border: 0 none;
+  background-color: transparent;
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  z-index: 100;
+  cursor: pointer; }
+  .fitting .filters__close-btn:hover .filters__icon-close {
+    fill: #a87b62; }
+
+.fitting .filters__form:hover::before {
+  opacity: 0.5; }
+
+.fitting .filters__form h2 {
+  font-size: 18px; }
+
+.fitting .filters__label {
+  font-size: 16px; }
+
+.fitting .filters__slider-container {
+  width: 304px;
+  margin-left: 25px; }
+
+.fitting .filters__submit {
+  width: 362px;
+  margin-left: auto;
+  margin-right: auto; }
+
+.fitting .filters__clear {
+  width: 362px;
+  height: 68px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border: 1px solid #a87b62;
+  margin-bottom: 40px; }
+
+.fitting .catalog {
+  width: 100%; }
 
 .fitting__products {
   -webkit-box-sizing: border-box;
@@ -516,22 +573,30 @@ img {
   padding: 23px 25px 14px;
   border: 1px solid #a87b62; }
 
-.fitting__products-img {
-  width: 200px;
-  margin-right: auto;
+.fitting__goods-img {
   cursor: pointer; }
+
+.fitting__room {
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  position: relative;
+  border: 2px solid #f6f5f4; }
 
 .fitting__hand-img {
   width: 600px; }
 
-.fitting__room {
-  position: relative; }
-
 .fitting__bracelet-img {
-  width: 322px;
-  position: absolute;
-  left: 147px;
-  bottom: -106px; }
+  position: absolute; }
+
+.fitting__ring-img {
+  position: absolute; }
+
+.fitting__falange-img {
+  position: absolute; }
+
+.img-fit {
+  display: none; }
 
 .footer {
   background-color: #000000;

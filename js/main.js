@@ -10,6 +10,10 @@ $(document).ready(function() {
     content_source: '.filters',
     hide_close: true
   });
+  $('.fitting__filters-btn').modaal({
+    content_source: '.filters',
+    hide_close: true
+  });
   $('.slider__wrapper').on('init', function(event, slick) {
     $(this).append('<div class="slick-dots-mobile"><p><span id="current">1</span> of <span id="total">'+ slick.slideCount +'</span></p></div>');
   });
