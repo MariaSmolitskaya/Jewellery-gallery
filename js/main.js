@@ -15,7 +15,7 @@ $(document).ready(function() {
     hide_close: true
   });
   $('.slider__wrapper').on('init', function(event, slick) {
-    $(this).append('<div class="slick-dots-mobile"><p><span id="current">1</span> of <span id="total">'+ slick.slideCount +'</span></p></div>');
+    $(this).append('<div class="slick-dots-mobile"><p><span id="current">1</span> из <span id="total">'+ slick.slideCount +'</span></p></div>');
   });
   $('.slider__wrapper').slick({
     infinite: true,
@@ -58,4 +58,26 @@ $(document).ready(function() {
     header: '> .filters__box > h2',
     collapsible: true
   });
+  $('.fitting__choose-box').easyFilter({
+    firstFilter: 'ring',
+    animation: 'fade',
+    duration: 'fast'
+  });
+  $(".fitting__img-upload").change(function () {
+    if (this.files && this.files[0]) {
+      let reader = new FileReader();
+      reader.onload = function (e) {
+        $('.fitting__photo-img img').attr('src', e.target.result);
+        $('.fitting__contour').show();
+      }
+      reader.readAsDataURL(this.files[0]);
+    }
+  });
 });
+
+const myGallery = GLightbox({
+  touchNavigation: true,
+  loop: true,
+  slideEffect: 'fade'
+});
+

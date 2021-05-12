@@ -10,6 +10,7 @@
   <link rel="preload" href="fonts/CormorantGaramond-Bold.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="preload" href="fonts/CormorantGaramond-Italic.woff2" as="font" type="font/woff2" crossorigin="anonymous">
   <link rel="stylesheet" href="css/style.min.css">
+
 </head>
 <body>
 <div style="display:none">
@@ -108,91 +109,12 @@
   <main class="fitting-main">
     <div class="fitting">
       <div class="fitting__choose-box">
-        <button class="fitting__filters-btn button" type="button" aria-label="show filters">Фильтры</button>
-        <section class="filters">
-          <form class="filters__form" action="https://echo.htmlacademy.ru">
-            <button class="filters__close-btn" type="button" aria-label="закрыть фильтры">
-              <svg width="32" height="32"><use xlink:href="img/sprite_auto.svg#icon-close"></use></svg>
-            </button>
-            <div class="filters__box">
-              <h2>Товар</h2>
-              <ul class="filters__list">
-                <li class="filters__item">
-                  <input class="filters__checkbox" type="checkbox" id="check1" value="necklaces">
-                  <label class="filters__label" for="check1">Колье</label>
-                </li>
-                <li class="filters__item">
-                  <input class="filters__checkbox" type="checkbox" id="check2" value="chokers">
-                  <label class="filters__label" for="check2">Ожерелья</label>
-                </li>
-                <li class="filters__item">
-                  <input class="filters__checkbox" type="checkbox" id="check3" value="rings">
-                  <label class="filters__label" for="check3">Кольца</label>
-                </li>
-                <li class="filters__item">
-                  <input class="filters__checkbox" type="checkbox" id="check4" value="earrings">
-                  <label class="filters__label" for="check4">Серьги</label>
-                </li>
-              </ul>
-            </div>
-            <div class="filters__box">
-              <h2>Материал</h2>
-              <ul class="filters__list">
-                <li class="filters__item">
-                  <input class="filters__checkbox" type="checkbox" id="check5" value="brass">
-                  <label class="filters__label" for="check5">Латунь</label>
-                </li>
-                <li class="filters__item">
-                  <input class="filters__checkbox" type="checkbox" id="check6" value="silver">
-                  <label class="filters__label" for="check6">Серебро</label>
-                </li>
-                <li class="filters__item">
-                  <input class="filters__checkbox" type="checkbox" id="check7" value="bijouterie">
-                  <label class="filters__label" for="check7">Бижутерия</label>
-                </li>
-                <li class="filters__item">
-                  <input class="filters__checkbox" type="checkbox" id="check8" value="alloy">
-                  <label class="filters__label" for="check8">Сплав</label>
-                </li>
-              </ul>
-            </div>
-            <div class="filters__box">
-              <h2>Дизайнеры</h2>
-              <ul class="filters__list">
-                <li class="filters__item">
-                  <input class="filters__checkbox" type="checkbox" id="check9" value="fiu">
-                  <label class="filters__label" for="check9">fiu.studio</label>
-                </li>
-                <li class="filters__item">
-                  <input class="filters__checkbox" type="checkbox" id="check10" value="cara">
-                  <label class="filters__label" for="check10">Cara Alambre</label>
-                </li>
-                <li class="filters__item">
-                  <input class="filters__checkbox" type="checkbox" id="check11" value="hrust">
-                  <label class="filters__label" for="check11">Hrust Stekla</label>
-                </li>
-                <li class="filters__item">
-                  <input class="filters__checkbox" type="checkbox" id="check12" value="fromflom">
-                  <label class="filters__label" for="check12">Fromflom</label>
-                </li>
-              </ul>
-            </div>
-            <div class="filters__box">
-              <h2>Цена</h2>
-              <div class="filters__slider">
-                <label class="visually-hidden" for="price">Цена</label>
-                <div class="filters__slider-container">
-                  <input class="filters__range" type="range" min="100" max="10000" id="price">
-                </div>
-              </div>
-            </div>
-            <button class="filters__submit button" type="submit" aria-label="apply filters">Применить</button>
-            <button class="filters__clear link" type="reset" aria-label="clear all filters">Очистить</button>
-          </form>
-        </section>
+        <button class="fitting__btn-ring button" type="button" data-easyfilter="ring">Кольца и браслеты</button>
+        <button class="fitting__btn-necklace button" type="button" data-easyfilter="necklace">Ожерелья</button>
+        <button class="fitting__btn-earring button" type="button" data-easyfilter="earring">Серьги</button>
 
         <section class="fitting__catalog catalog">
-          <div class="catalog__goods goods">
+          <div class="catalog__goods goods" data-easyitem="ring">
             <div class="fitting__goods-img fitting__goods-img--bracelet goods__img" id="10020">
               <img src="img/bracelet-fitting.png" width="500" height="500" alt="Серебряный браслет">
               <img class="img-fit" src="img/bracelet-fitting.png" width="500" height="500" alt="Серебряный браслет">
@@ -201,7 +123,7 @@
             <h3>Серебряный браслет</h3>
             <div class="goods__price">1600 ₽</div>
           </div>
-          <div class="catalog__goods goods">
+          <div class="catalog__goods goods" data-easyitem="ring">
             <div class="fitting__goods-img fitting__goods-img--bracelet goods__img" id="10021">
               <img src="img/fitting-bracelet2.jpeg" width="1320" height="1320" alt="Браслет Cara">
               <img class="img-fit" src="img/fitting-bracelet2.png" width="500" height="500">
@@ -209,7 +131,7 @@
             <h3>Браслет Cara</h3>
             <div class="goods__price">1400 ₽</div>
           </div>
-          <div class="catalog__goods goods">
+          <div class="catalog__goods goods" data-easyitem="ring">
             <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="20020">
               <img src="img/fitting-ring.jpg" width="835" height="835" alt="Кольцо серебряное">
               <img class="img-fit" src="img/fitting-ring.png" width="500" height="500">
@@ -217,7 +139,7 @@
             <h3>Кольцо серебряное</h3>
             <div class="goods__price">900 ₽</div>
           </div>
-          <div class="catalog__goods goods">
+          <div class="catalog__goods goods" data-easyitem="ring">
             <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="20021">
               <img src="img/fitting-ring2.jpg" width="835" height="835" alt="Кольцо MOST">
               <img class="img-fit" src="img/fitting-ring2.png" width="500" height="500">
@@ -225,7 +147,7 @@
             <h3>Кольцо MOST</h3>
             <div class="goods__price">1700 ₽</div>
           </div>
-          <div class="catalog__goods goods">
+          <div class="catalog__goods goods" data-easyitem="ring">
             <div class="fitting__goods-img fitting__goods-img--falange goods__img" id="30020">
               <img src="img/fitting-ring-falange.jpg" width="600" height="600" alt="Boho earrings">
               <img class="img-fit" src="img/fitting-ring-falange.png" width="500" height="500">
@@ -233,7 +155,7 @@
             <h3>Фаланговое кольцо</h3>
             <div class="goods__price">1200 ₽</div>
           </div>
-          <div class="catalog__goods goods">
+          <div class="catalog__goods goods" data-easyitem="ring">
             <div class="fitting__goods-img fitting__goods-img--bracelet goods__img" id="10022">
               <img src="img/fitting-bracelet3.jpeg" width="1320" height="1320" alt="Биколорный браслет">
               <img class="img-fit" src="img/fitting-bracelet3.png" width="500" height="500">
@@ -241,7 +163,7 @@
             <h3>Биколорный браслет</h3>
             <div class="goods__price">1700 ₽</div>
           </div>
-          <div class="catalog__goods goods">
+          <div class="catalog__goods goods" data-easyitem="ring">
             <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="20022">
               <img src="img/fitting-ring3.jpeg" width="1320" height="1320" alt="Кольцо AMR">
               <img class="img-fit" src="img/fitting-ring3.png" width="500" height="500">
@@ -249,7 +171,7 @@
             <h3>Кольцо AMR</h3>
             <div class="goods__price">1300 ₽</div>
           </div>
-          <div class="catalog__goods goods">
+          <div class="catalog__goods goods" data-easyitem="ring">
             <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="20023">
               <img src="img/fitting-ring4.jpeg" width="1320" height="1320" alt="Кольцо со звездой">
               <img class="img-fit" src="img/fitting-ring4.png" width="500" height="500">
@@ -257,7 +179,7 @@
             <h3>Кольцо со звездой</h3>
             <div class="goods__price">2100 ₽</div>
           </div>
-          <div class="catalog__goods goods">
+          <div class="catalog__goods goods" data-easyitem="ring">
             <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="20024">
               <img src="img/fitting-ring5.jpeg" width="1320" height="1320" alt="Золотое кольцо">
               <img class="img-fit" src="img/fitting-ring5.png" width="500" height="500">
@@ -265,11 +187,119 @@
             <h3>Золотое кольцо</h3>
             <div class="goods__price">2100 ₽</div>
           </div>
+          <div class="catalog__goods goods" data-easyitem="necklace">
+            <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="40020">
+              <img src="img/fitting-necklace1.jpeg" alt="Медальон">
+            </div>
+            <h3>Ожерелье из белого золота</h3>
+            <div class="goods__price">21000 ₽</div>
+          </div>
+          <div class="catalog__goods goods" data-easyitem="necklace">
+            <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="40021">
+              <img src="img/fitting-necklace2.jpeg" alt="Колье-цепь">
+            </div>
+            <h3>Золотое колье-цепь</h3>
+            <div class="goods__price">7000 ₽</div>
+          </div>
+          <div class="catalog__goods goods" data-easyitem="necklace">
+            <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="40022">
+              <img src="img/fitting-necklace3.png" alt="Колье-цепь">
+            </div>
+            <h3>Медальон с горным хрусталем</h3>
+            <div class="goods__price">7000 ₽</div>
+          </div>
+          <div class="catalog__goods goods" data-easyitem="necklace">
+            <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="40023">
+              <img src="img/fitting-necklace4.jpeg" alt="Колье">
+            </div>
+            <h3>Подвеска "Звезда" из серебра</h3>
+            <div class="goods__price">3800 ₽</div>
+          </div>
+          <div class="catalog__goods goods" data-easyitem="necklace">
+            <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="40024">
+              <img src="img/fitting-necklace5.jpeg" alt="Колье">
+            </div>
+            <h3>Позолоченное колье-цепь с розовым кварцем</h3>
+            <div class="goods__price">5800 ₽</div>
+          </div>
+          <div class="catalog__goods goods" data-easyitem="necklace">
+            <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="40025">
+              <img src="img/fitting-necklace6.jpeg" alt="Колье">
+            </div>
+            <h3>Колье-цепь</h3>
+            <div class="goods__price">5800 ₽</div>
+          </div>
+          <div class="catalog__goods goods" data-easyitem="earring">
+            <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="50021">
+              <img src="img/fitting-earring1.jpeg" alt="Серьги-полумесяцы">
+            </div>
+            <h3>Позолоченные серьги-полумесяцы</h3>
+            <div class="goods__price">6800 ₽</div>
+          </div>
+          <div class="catalog__goods goods" data-easyitem="earring">
+            <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="50022">
+              <img src="img/fitting-earring2.jpeg" alt="Серьги">
+            </div>
+            <h3>Позолоченные серьги с крыльями</h3>
+            <div class="goods__price">16200 ₽</div>
+          </div>
+          <div class="catalog__goods goods" data-easyitem="earring">
+            <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="50023">
+              <img src="img/fitting-earring3.jpeg" alt="Серьги">
+            </div>
+            <h3>Позолоченные серьги</h3>
+            <div class="goods__price">9900 ₽</div>
+          </div>
+          <div class="catalog__goods goods" data-easyitem="earring">
+            <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="50024">
+              <img src="img/fitting-earring4.jpeg" alt="Серьги">
+            </div>
+            <h3>Асимметричные серебристые серьги</h3>
+            <div class="goods__price">4500 ₽</div>
+          </div>
+          <div class="catalog__goods goods" data-easyitem="earring">
+            <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="50025">
+              <img src="img/fitting-earring5.jpeg" alt="Серьги">
+            </div>
+            <h3>Позолоченные серьги-сердца</h3>
+            <div class="goods__price">14500 ₽</div>
+          </div>
+          <div class="catalog__goods goods" data-easyitem="earring">
+            <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="50026">
+              <img src="img/fitting-earring6.jpeg" alt="Серьги">
+            </div>
+            <h3>Позолоченные серьги с цветной эмалью</h3>
+            <div class="goods__price">7500 ₽</div>
+          </div>
+          <div class="catalog__goods goods" data-easyitem="earring">
+            <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="50027">
+              <img src="img/fitting-earring7.jpeg" alt="Серьги">
+            </div>
+            <h3>Позолоченные серьги кольца с жемчугом</h3>
+            <div class="goods__price">10500 ₽</div>
+          </div>
+          <div class="catalog__goods goods" data-easyitem="earring">
+            <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="50028">
+              <img src="img/fitting-earring8.jpeg" alt="Серьги">
+            </div>
+            <h3>Золотистые серьги с кристаллами</h3>
+            <div class="goods__price">4500 ₽</div>
+          </div>
+          <div class="catalog__goods goods" data-easyitem="earring">
+            <div class="fitting__goods-img fitting__goods-img--ring goods__img" id="50029">
+              <img src="img/fitting-earring9.jpeg" alt="Серьги">
+            </div>
+            <h3>Позолоченные серьги-лошади</h3>
+            <div class="goods__price">14500 ₽</div>
+          </div>
         </section>
       </div>
       <div class="fitting__room">
-        <div class="fitting__hand-img">
+        <div class="fitting__photo-img">
           <img src="img/woman-hand.png">
+        </div>
+        <div class="fitting__contour">
+          <img src="img/woman-hand-contour.png">
         </div>
         <div class="fitting__bracelet-img">
           <img src="">
@@ -280,14 +310,100 @@
         <div class="fitting__falange-img">
           <img src="">
         </div>
+        <div class="fitting__necklace-img">
+          <img src="">
+        </div>
+        <div class="fitting__earring-img">
+          <img src="">
+        </div>
       </div>
+     <!-- <div class="fitting__controls">
+        <input class="fitting__img-upload button" type="file">
+        <button class="fitting__zoom-in" type="button">Увелить</button>
+        <button class="fitting__zoom-out" type="button">Уменьшить</button>
+      </div>-->
     </div>
   </main>
+
+  <footer class="footer">
+    <section class="footer__sign sign">
+      <h2>Подпишитесь на рассылку Temple</h2>
+      <p>Узнавайте первыми о новинках, специальных предложениях, скидках и многом другом</p>
+      <form class="sign__form " method="post" action="https://echo.htmlacademy.ru">
+        <label class="visually-hidden" for="sign-input">Email</label>
+        <input class="sign__input" type="email" placeholder="Ваш E-mail" id="sign-input">
+        <button class="sign__submit" type="submit" aria-label="подтвердить и подписаться">
+          Подписаться
+          <svg class="sign__icon" width="30" height="11"><use xlink:href="img/sprite_auto.svg#icon-sign"></use></svg>
+        </button>
+      </form>
+    </section>
+
+    <div class="footer__wrapper">
+      <section class="footer__nav nav">
+        <ul class="nav__list">
+          <li class="nav__item">
+            <a class="nav__link" href="#">Заказ</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Доставка</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Оплата</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Возврат & Обмен</a>
+          </li>
+        </ul>
+        <ul class="nav__list nav__list--about">
+          <li class="nav__item">
+            <a class="nav__link" href="#">О нас</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Часы работы</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Работа</a>
+          </li>
+          <li class="nav__item">
+            <a class="nav__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="footer__contacts contacts">
+        <ul class="contacts__list">
+          <li class="contacts__item">
+            <a class="contacts__link" href="#">
+              <svg class="contacts__icon contacts__icon--facebook" width="8" height="15"><use xlink:href="img/sprite_auto.svg#icon-facebook"></use></svg>
+              <span class="visually-hidden">Go to</span>
+              <span class="contacts__title">Facebook</span>
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link" href="#">
+              <svg class="contacts__icon contacts__icon--instagram" width="15" height="15"><use xlink:href="img/sprite_auto.svg#icon-instagram"></use></svg>
+              <span class="visually-hidden">Go to</span>
+              <span class="contacts__title">Instagram</span>
+            </a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link" href="#">
+              <svg class="contacts__icon contacts__icon--pinterest" width="16" height="15"><use xlink:href="img/sprite_auto.svg#icon-pinterest"></use></svg>
+              <span class="visually-hidden">Go to</span>
+              <span class="contacts__title">Pinterest</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </footer>
 </div>
 <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 <script src="js/vendor.js"></script>
-<script src="js/main.js" type="text/javascript" async=""></script>
+<script src="js/jquery.easyFilter.min.js"></script>
+<script src="js/main.js" async=""></script>
 <script src="js/script.js"></script>
 <script>svg4everybody();</script>
 </body>

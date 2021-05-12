@@ -7,7 +7,7 @@ const FIT_PRODUCTS = [
     type: 'bracelet',
     width: 322,
     top: 488,
-    left: 146
+    left: 148
   },
   {
     id: '10021',
@@ -78,10 +78,144 @@ const FIT_PRODUCTS = [
     top: 234,
     left: 186,
     transform: 'rotate(348deg)'
+  },
+  {
+    id: '40020',
+    src: 'img/fitting-necklace1.png',
+    type: 'necklace',
+    width: 297,
+    top: 297,
+    left: 156
+  },
+  {
+    id: '40021',
+    src: 'img/fitting-necklace2.png',
+    type: 'necklace',
+    width: 509,
+    top: 52,
+    left: 59
+  },
+  {
+    id: '40022',
+    src: 'img/fitting-necklace3.png',
+    type: 'necklace',
+    width: 323,
+    top: 289,
+    left: 142
+  },
+  {
+    id: '40023',
+    src: 'img/fitting-necklace4.png',
+    type: 'necklace',
+    width: 278,
+    top: 293,
+    left: 155,
+    transform: 'rotate(5deg)'
+  },
+  {
+    id: '40024',
+    src: 'img/fitting-necklace5.png',
+    type: 'necklace',
+    width: 488,
+    top: 83,
+    left: 67
+  },
+  {
+    id: '40025',
+    src: 'img/fitting-necklace6.png',
+    type: 'necklace',
+    width: 488,
+    top: 83,
+    left: 67
+  },
+  {
+    id: '50021',
+    src: 'img/fitting-earring1.png',
+    type: 'earring',
+    width: 430,
+    top: 274,
+    left: 216
+  },
+  {
+    id: '50022',
+    src: 'img/fitting-earring2.png',
+    type: 'earring',
+    width: 409,
+    top: 345,
+    left: 176
+  },
+  {
+    id: '50023',
+    src: 'img/fitting-earring3.png',
+    type: 'earring',
+    width: 250,
+    top: 320,
+    left: 226
+  },
+  {
+    id: '50024',
+    src: 'img/fitting-earring4.png',
+    type: 'earring',
+    width: 180,
+    top: 348,
+    left: 264
+  },
+  {
+    id: '50025',
+    src: 'img/fitting-earring5.png',
+    type: 'earring',
+    width: 321,
+    top: 309,
+    left: 264
+  },
+  {
+    id: '50026',
+    src: 'img/fitting-earring6.png',
+    type: 'earring',
+    width: 224,
+    top: 317,
+    left: 247
+  },
+  {
+    id: '50027',
+    src: 'img/fitting-earring7.png',
+    type: 'earring',
+    width: 224,
+    top: 317,
+    left: 247
+  },
+  {
+    id: '50028',
+    src: 'img/fitting-earring8.png',
+    type: 'earring',
+    width: 224,
+    top: 338,
+    left: 247
+  },
+  {
+    id: '50029',
+    src: 'img/fitting-earring9.png',
+    type: 'earring',
+    width: 265,
+    top: 327,
+    left: 223
   }
 ];
 
 let products = document.querySelectorAll('.fitting__goods-img');
+
+const btnRing = document.querySelector('.fitting__btn-ring');
+const btnNecklace = document.querySelector('.fitting__btn-necklace');
+const btnEarring = document.querySelector('.fitting__btn-earring');
+const fittingPhoto = document.querySelector('.fitting__photo-img img');
+const fittingBracelet = document.querySelector('.fitting__bracelet-img img');
+const fittingRing = document.querySelector('.fitting__ring-img img');
+const fittingFalange = document.querySelector('.fitting__falange-img img');
+const fittingNecklace = document.querySelector('.fitting__necklace-img img');
+const fittingEarring = document.querySelector('.fitting__earring-img img');
+const btnImgLoad = document.querySelector('.fitting__img-upload');
+const btnZoomIn = document.querySelector('.fitting__zoom-in');
+const btnZoomOut = document.querySelector('.fitting__zoom-out');
 
 /*function fitProduct() {
   let products = document.querySelectorAll('.fitting__goods-img');
@@ -151,8 +285,68 @@ for (let product of products) {
             fittingFalange.style.left = FIT_PRODUCTS[i].left + 'px';
             fittingFalange.style.transform = FIT_PRODUCTS[i].transform;
             break;
+          case "necklace":
+            let fittingNecklace = document.querySelector('.fitting__necklace-img');
+            let fittingNecklaceImg = document.querySelector('.fitting__necklace-img img');
+            fittingNecklaceImg.src = FIT_PRODUCTS[i].src;
+            fittingNecklaceImg.style.width = FIT_PRODUCTS[i].width + 'px';
+            fittingNecklace.style.top = FIT_PRODUCTS[i].top + 'px';
+            fittingNecklace.style.left = FIT_PRODUCTS[i].left + 'px';
+            fittingNecklace.style.transform = FIT_PRODUCTS[i].transform;
+            break;
+          case "earring":
+            let fittingEarring = document.querySelector('.fitting__earring-img');
+            let fittingEarringImg = document.querySelector('.fitting__earring-img img');
+            fittingEarringImg.src = FIT_PRODUCTS[i].src;
+            fittingEarringImg.style.width = FIT_PRODUCTS[i].width + 'px';
+            fittingEarring.style.top = FIT_PRODUCTS[i].top + 'px';
+            fittingEarring.style.left = FIT_PRODUCTS[i].left + 'px';
+            fittingEarring.style.transform = FIT_PRODUCTS[i].transform;
+            break;
         }
       }
     }
   })
 }
+
+btnRing.addEventListener('click', function () {
+  fittingPhoto.src = 'img/woman-hand.png';
+  fittingNecklace.src = '';
+  fittingEarring.src = '';
+});
+
+btnNecklace.addEventListener('click', function () {
+  fittingPhoto.src = 'img/neck.jpg';
+  fittingRing.src = '';
+  fittingFalange.src = '';
+  fittingBracelet.src = '';
+  fittingEarring.src = '';
+});
+
+btnEarring.addEventListener('click', function () {
+  fittingPhoto.src = 'img/photo-ear.jpg';
+  fittingNecklace.src = '';
+  fittingRing.src = '';
+  fittingFalange.src = '';
+  fittingBracelet.src = '';
+});
+
+
+// btnZoomIn.addEventListener('click', function (){
+//   let currWidth = fittingPhoto.clientWidth;
+//   fittingPhoto.style.width = (currWidth + 50) + "px";
+// });
+//
+//
+// btnZoomOut.addEventListener('click', function (){
+//   let currWidth = fittingPhoto.clientWidth;
+//   fittingPhoto.style.width = (currWidth - 50) + "px";
+// });
+//
+// document.onkeydown=function(){
+//   fittingPhoto.style.left = (parseInt(myimg.style.left) + myevent(0)) + "px";
+//   fittingPhoto.style.top = (parseInt(myimg.style.top) + myevent(1)) + "px";
+// }
+// function myevent(e){
+//   return Math.round(Math.sin((event.keyCode - 2 - e) / 2 * Math.PI));
+// }
